@@ -26,15 +26,17 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <!-- Video de fondo: archivo local en la misma carpeta. Cambia el nombre del src si deseas usar otro video. -->
+        <video class="hero-video" autoplay muted loop playsinline aria-hidden="true">
+            <source src="Ttulo_Estrategias_de_Guerra_Tctica_Dominando_el_Ca (1) (online-video-cutter.com).mp4" type="video/mp4">
+            <!-- Fallback: el navegador no soporta video -->
+        </video>
         <div class="hero-content">
             <h1 class="hero-title">GUERRA TÁCTICA</h1>
-            <p class="hero-description">
-                Sumérgete en el mundo de la estrategia militar moderna. Controla arsenales letales, 
-                despliega vehículos blindados y lidera tu escuadrón hacia la victoria.
-            </p>
+            
             <div class="hero-buttons">
-                <button class="btn btn-primary">Iniciar Misión</button>
-                <button class="btn btn-secondary">Ver Arsenal</button>
+                <a href="armamento.html" class="btn btn-primary" role="button">Iniciar Misión</a>
+                <a href="armamento.html" class="btn btn-secondary" role="button">Ver Arsenal</a>
             </div>
         </div>
     </section>
