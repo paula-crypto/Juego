@@ -8,18 +8,28 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Particles Background -->
+    <div class="particles-container" id="particles"></div>
+    <div class="grid-background"></div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
-                <span class="nav-icon">🛡️</span>
-                <span class="brand-text">Guerra Táctica</span>
+                <span class="nav-icon pulse-icon">🛡️</span>
+                <span class="brand-text glitch-text" data-text="Guerra Táctica">Guerra Táctica</span>
             </div>
             
             <div class="nav-menu">
-                <a href="index.html" class="nav-link">🏠 Inicio</a>
-                <a href="armamento.html" class="nav-link">⚔️ Armamento</a>
-                <a href="vehiculos.html" class="nav-link active">🚗 Vehículos</a>
+                <a href="index.html" class="nav-link">
+                    <span class="nav-icon-small">🏠</span> Inicio
+                </a>
+                <a href="armamento.html" class="nav-link">
+                    <span class="nav-icon-small">⚔️</span> Armamento
+                </a>
+                <a href="vehiculos.html" class="nav-link active">
+                    <span class="nav-icon-small">🚗</span> Vehículos
+                </a>
             </div>
         </div>
     </nav>
@@ -29,365 +39,332 @@
         <div class="container">
             <!-- Header -->
             <div class="page-header">
-                <h1 class="page-title">
-                    ✈️ Flota de Combate
-                </h1>
+                <div class="page-icon-large pulse-icon">✈️</div>
+                <h1 class="page-title glitch-text" data-text="FLOTA DE COMBATE">FLOTA DE COMBATE</h1>
                 <p class="page-description">
                     Descubre nuestra flota de vehículos militares de élite diseñados para dominar cualquier campo de batalla
                 </p>
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">
+                        <span class="tab-glow"></span>
+                        TODOS
+                    </button>
+                    <button class="filter-tab" data-filter="terrestre">
+                        <span class="tab-glow"></span>
+                        TERRESTRES
+                    </button>
+                    <button class="filter-tab" data-filter="aereo">
+                        <span class="tab-glow"></span>
+                        AÉREOS
+                    </button>
+                </div>
             </div>
 
             <!-- Vehicles Grid -->
             <div class="vehicles-grid">
                 <!-- M1A2 Abrams -->
-                <div class="vehicle-card">
-                    <div class="vehicle-layout">
-                        <div class="vehicle-image-section">
-                            <!-- <img src="https://israelnoticias.com/wp-content/uploads/2022/07/M1A2-SEPv3-Abrams-il.jpg" alt="M1A2 Abrams" class="vehicle-image"> -->
-                               <model-viewer src="desert+tank+3d+model.glb" alt="M1A2 Abrams" auto-rotate camera-controls
-                        style="width: 100%; height: 900px;">
-                    </model-viewer>
-                            <span class="vehicle-badge tanque-pesado">Tanque Pesado</span>
+                <div class="vehicle-card-enhanced" data-category="terrestre">
+                    <div class="card-glow"></div>
+                    <div class="hologram-effect"></div>
+                    <div class="scan-line"></div>
+                    <div class="vehicle-layout-enhanced">
+                        <div class="vehicle-image-section-enhanced">
+                            <model-viewer src="desert+tank+3d+model.glb" alt="M1A2 Abrams" auto-rotate camera-controls
+                                style="width: 100%; height: 400px;">
+                            </model-viewer>
+                            <span class="vehicle-badge tanque-pesado pulse-badge">
+                                <span class="badge-icon">🛡️</span> Tanque Pesado
+                            </span>
+                            <div class="rarity-indicator mythic">
+                                <span class="rarity-shine"></span>
+                            </div>
                         </div>
                         
-                        <div class="vehicle-content-section">
-                            <div class="vehicle-info">
-                                <h3 class="vehicle-name">M1A2 Abrams</h3>
-                                <p class="vehicle-type">Tanque Principal de Combate</p>
-                                <p class="vehicle-description">El tanque de combate más avanzado del mundo, equipado con blindaje reactivo y cañón de 120mm. Domina el campo de batalla con su potencia de fuego superior y protección excepcional.</p>
+                        <div class="vehicle-content-section-enhanced">
+                            <div class="vehicle-header">
+                                <div>
+                                    <h3 class="vehicle-name">M1A2 Abrams</h3>
+                                    <p class="vehicle-type">Tanque Principal de Combate</p>
+                                </div>
+                                <div class="vehicle-level">Nv. 30</div>
                             </div>
                             
-                            <div class="vehicle-stats">
+                            <p class="vehicle-description">El tanque de combate más avanzado del mundo, equipado con blindaje reactivo y cañón de 120mm. Domina el campo de batalla con su potencia de fuego superior.</p>
+                            
+                            <div class="vehicle-stats-enhanced">
                                 <div class="stat-row">
-                                    <span class="stat-label">🛡️ Blindaje:</span>
+                                    <span class="stat-label">🛡️ Blindaje</span>
                                     <div class="stat-container">
                                         <div class="progress-bar">
-                                            <div class="progress-fill power-95"></div>
+                                            <div class="progress-fill power-95 animated-bar"></div>
                                         </div>
                                         <span class="stat-value">95</span>
                                     </div>
                                 </div>
                                 
                                 <div class="stat-row">
-                                    <span class="stat-label">⚡ Velocidad:</span>
-                                    <span class="stat-value">67 km/h</span>
+                                    <span class="stat-label">⚡ Velocidad</span>
+                                    <span class="stat-value highlight">67 km/h</span>
                                 </div>
                                 
                                 <div class="stat-row">
-                                    <span class="stat-label">🔥 Potencia:</span>
+                                    <span class="stat-label">🔥 Potencia</span>
                                     <div class="stat-container">
                                         <div class="progress-bar">
-                                            <div class="progress-fill power-98"></div>
+                                            <div class="progress-fill power-98 animated-bar"></div>
                                         </div>
                                         <span class="stat-value">98</span>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="vehicle-details">
+                            <div class="vehicle-details-enhanced">
                                 <div class="detail-item">
-                                    <span class="detail-label">👥 Tripulación:</span>
+                                    <span class="detail-label">👥 Tripulación</span>
                                     <span class="detail-value">4 personas</span>
                                 </div>
                                 <div class="detail-item">
-                                    <span class="detail-label">⚖️ Peso:</span>
+                                    <span class="detail-label">⚖️ Peso</span>
                                     <span class="detail-value">54 toneladas</span>
                                 </div>
+                            </div>
+
+                            <div class="vehicle-footer">
+                                <button class="vehicle-btn" data-testid="deploy-abrams-btn">
+                                    <span class="btn-glow"></span>
+                                    <span class="btn-icon">🚀</span> DESPLEGAR
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Apache AH-64 -->
-                <div class="vehicle-card">
-                    <div class="vehicle-layout">
-                        <div class="vehicle-image-section">
-                            <!-- <img src="https://aeronauticapy.com/wp-content/uploads/2018/06/ah-64-apache-nubes-oscuras-256508.jpg" alt="Apache AH-64" class="vehicle-image"> -->
-                             <model-viewer src="military+helicopter+3d+model.glb" alt="M1A2 Abrams" auto-rotate camera-controls
-                        style="width: 100%; height: 550px;">
-                    </model-viewer>
-                            <span class="vehicle-badge apoyo-aereo">Apoyo Aéreo</span>
+                <div class="vehicle-card-enhanced" data-category="aereo">
+                    <div class="card-glow"></div>
+                    <div class="hologram-effect"></div>
+                    <div class="scan-line"></div>
+                    <div class="vehicle-layout-enhanced">
+                        <div class="vehicle-image-section-enhanced">
+                            <model-viewer src="military+helicopter+3d+model.glb" alt="Apache" auto-rotate camera-controls
+                                style="width: 100%; height: 400px;">
+                            </model-viewer>
+                            <span class="vehicle-badge apoyo-aereo pulse-badge">
+                                <span class="badge-icon">🚁</span> Apoyo Aéreo
+                            </span>
+                            <div class="rarity-indicator legendary">
+                                <span class="rarity-shine"></span>
+                            </div>
                         </div>
                         
-                        <div class="vehicle-content-section">
-                            <div class="vehicle-info">
-                                <h3 class="vehicle-name">Apache AH-64</h3>
-                                <p class="vehicle-type">Helicóptero de Ataque</p>
-                                <p class="vehicle-description">Helicóptero de ataque multifunción con capacidad todo tiempo. Armado con misiles Hellfire y cañón automático de 30mm para eliminación precisa de objetivos.</p>
+                        <div class="vehicle-content-section-enhanced">
+                            <div class="vehicle-header">
+                                <div>
+                                    <h3 class="vehicle-name">Apache AH-64</h3>
+                                    <p class="vehicle-type">Helicóptero de Ataque</p>
+                                </div>
+                                <div class="vehicle-level">Nv. 28</div>
                             </div>
                             
-                            <div class="vehicle-stats">
+                            <p class="vehicle-description">Helicóptero de ataque multifunción con capacidad todo tiempo. Armado con misiles Hellfire y cañón automático de 30mm para eliminación precisa.</p>
+                            
+                            <div class="vehicle-stats-enhanced">
                                 <div class="stat-row">
-                                    <span class="stat-label">🛡️ Blindaje:</span>
+                                    <span class="stat-label">🛡️ Blindaje</span>
                                     <div class="stat-container">
                                         <div class="progress-bar">
-                                            <div class="progress-fill power-70"></div>
+                                            <div class="progress-fill power-70 animated-bar"></div>
                                         </div>
                                         <span class="stat-value">70</span>
                                     </div>
                                 </div>
                                 
                                 <div class="stat-row">
-                                    <span class="stat-label">⚡ Velocidad:</span>
-                                    <span class="stat-value">293 km/h</span>
+                                    <span class="stat-label">⚡ Velocidad</span>
+                                    <span class="stat-value highlight">293 km/h</span>
                                 </div>
                                 
                                 <div class="stat-row">
-                                    <span class="stat-label">🔥 Potencia:</span>
+                                    <span class="stat-label">🔥 Potencia</span>
                                     <div class="stat-container">
                                         <div class="progress-bar">
-                                            <div class="progress-fill power-92"></div>
+                                            <div class="progress-fill power-92 animated-bar"></div>
                                         </div>
                                         <span class="stat-value">92</span>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="vehicle-details">
+                            <div class="vehicle-details-enhanced">
                                 <div class="detail-item">
-                                    <span class="detail-label">👥 Tripulación:</span>
+                                    <span class="detail-label">👥 Tripulación</span>
                                     <span class="detail-value">2 personas</span>
                                 </div>
                                 <div class="detail-item">
-                                    <span class="detail-label">⚖️ Peso:</span>
+                                    <span class="detail-label">⚖️ Peso</span>
                                     <span class="detail-value">5.2 toneladas</span>
                                 </div>
+                            </div>
+
+                            <div class="vehicle-footer">
+                                <button class="vehicle-btn" data-testid="deploy-apache-btn">
+                                    <span class="btn-glow"></span>
+                                    <span class="btn-icon">🚀</span> DESPLEGAR
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Bradley M2A3 -->
-                <div class="vehicle-card">
-                    <div class="vehicle-layout">
-                        <div class="vehicle-image-section">
-                            <!-- <img src="https://p.turbosquid.com/ts-thumb/GR/dDN5j1/d9/2ps/jpg/1727974393/600x600/fit_q87/c6d30bd422719815a534ce00e84b761a7bbd8200/2ps.jpg" alt="Bradley M2A3" class="vehicle-image"> -->
-                             <model-viewer src="military+tank+3d+model.glb" alt="M1A2 Abrams" auto-rotate camera-controls
-                        style="width: 100%; height: 550px;">
-                    </model-viewer>
-                            <span class="vehicle-badge transporte-blindado">Transporte Blindado</span>
+                <div class="vehicle-card-enhanced" data-category="terrestre">
+                    <div class="card-glow"></div>
+                    <div class="hologram-effect"></div>
+                    <div class="scan-line"></div>
+                    <div class="vehicle-layout-enhanced">
+                        <div class="vehicle-image-section-enhanced">
+                            <model-viewer src="military+tank+3d+model.glb" alt="Bradley" auto-rotate camera-controls
+                                style="width: 100%; height: 400px;">
+                            </model-viewer>
+                            <span class="vehicle-badge transporte-blindado pulse-badge">
+                                <span class="badge-icon">🚛</span> Transporte
+                            </span>
+                            <div class="rarity-indicator epic">
+                                <span class="rarity-shine"></span>
+                            </div>
                         </div>
                         
-                        <div class="vehicle-content-section">
-                            <div class="vehicle-info">
-                                <h3 class="vehicle-name">Bradley M2A3</h3>
-                                <p class="vehicle-type">Vehículo de Combate de Infantería</p>
-                                <p class="vehicle-description">Vehículo blindado de transporte de tropas con capacidad de combate. Transporta hasta 6 soldados totalmente equipados mientras proporciona fuego de apoyo.</p>
+                        <div class="vehicle-content-section-enhanced">
+                            <div class="vehicle-header">
+                                <div>
+                                    <h3 class="vehicle-name">Bradley M2A3</h3>
+                                    <p class="vehicle-type">Vehículo de Combate de Infantería</p>
+                                </div>
+                                <div class="vehicle-level">Nv. 20</div>
                             </div>
                             
-                            <div class="vehicle-stats">
+                            <p class="vehicle-description">Vehículo blindado de transporte de tropas con capacidad de combate. Transporta hasta 6 soldados totalmente equipados mientras proporciona fuego de apoyo.</p>
+                            
+                            <div class="vehicle-stats-enhanced">
                                 <div class="stat-row">
-                                    <span class="stat-label">🛡️ Blindaje:</span>
+                                    <span class="stat-label">🛡️ Blindaje</span>
                                     <div class="stat-container">
                                         <div class="progress-bar">
-                                            <div class="progress-fill power-80"></div>
+                                            <div class="progress-fill power-80 animated-bar"></div>
                                         </div>
                                         <span class="stat-value">80</span>
                                     </div>
                                 </div>
                                 
                                 <div class="stat-row">
-                                    <span class="stat-label">⚡ Velocidad:</span>
-                                    <span class="stat-value">66 km/h</span>
+                                    <span class="stat-label">⚡ Velocidad</span>
+                                    <span class="stat-value highlight">66 km/h</span>
                                 </div>
                                 
                                 <div class="stat-row">
-                                    <span class="stat-label">🔥 Potencia:</span>
+                                    <span class="stat-label">🔥 Potencia</span>
                                     <div class="stat-container">
                                         <div class="progress-bar">
-                                            <div class="progress-fill power-75"></div>
+                                            <div class="progress-fill power-75 animated-bar"></div>
                                         </div>
                                         <span class="stat-value">75</span>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="vehicle-details">
+                            <div class="vehicle-details-enhanced">
                                 <div class="detail-item">
-                                    <span class="detail-label">👥 Tripulación:</span>
+                                    <span class="detail-label">👥 Tripulación</span>
                                     <span class="detail-value">3 personas</span>
                                 </div>
                                 <div class="detail-item">
-                                    <span class="detail-label">⚖️ Peso:</span>
+                                    <span class="detail-label">⚖️ Peso</span>
                                     <span class="detail-value">27.6 toneladas</span>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Predator MQ-1 -->
-                <div class="vehicle-card">
-                    <div class="vehicle-layout">
-                        <div class="vehicle-image-section">
-                            <!-- <img src="https://gdb.voanews.com/5f76aa56-c41c-4602-bb64-cf68f7acf84a_cx0_cy9_cw0_w408_r1_s.jpg" alt="Predator MQ-1" class="vehicle-image"> -->
-                             <model-viewer src="drone+3d+model.glb" alt="M1A2 Abrams" auto-rotate camera-controls
-                        style="width: 100%; height: 550px;">
-                    </model-viewer>
-                            <span class="vehicle-badge reconocimiento">Reconocimiento/Ataque</span>
-                        </div>
-                        
-                        <div class="vehicle-content-section">
-                            <div class="vehicle-info">
-                                <h3 class="vehicle-name">Predator MQ-1</h3>
-                                <p class="vehicle-type">Dron de Combate</p>
-                                <p class="vehicle-description">Dron no tripulado para misiones de reconocimiento y eliminación selectiva. Equipado con misiles Hellfire y sistema de vigilancia avanzado.</p>
-                            </div>
-                            
-                            <div class="vehicle-stats">
-                                <div class="stat-row">
-                                    <span class="stat-label">🛡️ Blindaje:</span>
-                                    <div class="stat-container">
-                                        <div class="progress-bar">
-                                            <div class="progress-fill power-25"></div>
-                                        </div>
-                                        <span class="stat-value">25</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="stat-row">
-                                    <span class="stat-label">⚡ Velocidad:</span>
-                                    <span class="stat-value">217 km/h</span>
-                                </div>
-                                
-                                <div class="stat-row">
-                                    <span class="stat-label">🔥 Potencia:</span>
-                                    <div class="stat-container">
-                                        <div class="progress-bar">
-                                            <div class="progress-fill power-85"></div>
-                                        </div>
-                                        <span class="stat-value">85</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="vehicle-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">👥 Tripulación:</span>
-                                    <span class="detail-value">0 personas</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">⚖️ Peso:</span>
-                                    <span class="detail-value">512 kg</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Humvee M1114 -->
-                <div class="vehicle-card">
-                    <div class="vehicle-layout">
-                        <div class="vehicle-image-section">
-                            <!-- <img src="https://www.machinegun.fr/products_img/20363/C_6.jpg" alt="Humvee M1114" class="vehicle-image"> -->
-                             <model-viewer src="armored+humvee+3d+model.glb" alt="M1A2 Abrams" auto-rotate camera-controls
-                        style="width: 100%; height: 550px;">
-                    </model-viewer>
-                            <span class="vehicle-badge transporte-ligero">Transporte Ligero</span>
-                        </div>
-                        
-                        <div class="vehicle-content-section">
-                            <div class="vehicle-info">
-                                <h3 class="vehicle-name">Humvee M1114</h3>
-                                <p class="vehicle-type">Vehículo Utilitario</p>
-                                <p class="vehicle-description">Vehículo utilitario blindado para transporte rápido de personal y suministros. Versátil y maniobrable para operaciones en diversos terrenos.</p>
-                            </div>
-                            
-                            <div class="vehicle-stats">
-                                <div class="stat-row">
-                                    <span class="stat-label">🛡️ Blindaje:</span>
-                                    <div class="stat-container">
-                                        <div class="progress-bar">
-                                            <div class="progress-fill power-60"></div>
-                                        </div>
-                                        <span class="stat-value">60</span>
-                                    </div>
-                                </div>
-                                
-                                <div class="stat-row">
-                                    <span class="stat-label">⚡ Velocidad:</span>
-                                    <span class="stat-value">105 km/h</span>
-                                </div>
-                                
-                                <div class="stat-row">
-                                    <span class="stat-label">🔥 Potencia:</span>
-                                    <div class="stat-container">
-                                        <div class="progress-bar">
-                                            <div class="progress-fill power-40"></div>
-                                        </div>
-                                        <span class="stat-value">40</span>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="vehicle-details">
-                                <div class="detail-item">
-                                    <span class="detail-label">👥 Tripulación:</span>
-                                    <span class="detail-value">4 personas</span>
-                                </div>
-                                <div class="detail-item">
-                                    <span class="detail-label">⚖️ Peso:</span>
-                                    <span class="detail-value">4.2 toneladas</span>
-                                </div>
+                            <div class="vehicle-footer">
+                                <button class="vehicle-btn" data-testid="deploy-bradley-btn">
+                                    <span class="btn-glow"></span>
+                                    <span class="btn-icon">🚀</span> DESPLEGAR
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- F-22 Raptor -->
-                <div class="vehicle-card">
-                    <div class="vehicle-layout">
-                        <div class="vehicle-image-section">
-                            <!-- <img src="https://israelnoticias.com/wp-content/uploads/2025/03/F-22-Raptor-1.webp" alt="F-22 Raptor" class="vehicle-image"> -->
-                             <model-viewer src="futuristic+jet+3d+model.glb" alt="M1A2 Abrams" auto-rotate camera-controls
-                        style="width: 100%; height: 550px;">
-                    </model-viewer>
-                            <span class="vehicle-badge dominio-aereo">Dominio Aéreo</span>
+                <div class="vehicle-card-enhanced" data-category="aereo">
+                    <div class="card-glow"></div>
+                    <div class="hologram-effect"></div>
+                    <div class="scan-line"></div>
+                    <div class="vehicle-layout-enhanced">
+                        <div class="vehicle-image-section-enhanced">
+                            <model-viewer src="futuristic+jet+3d+model.glb" alt="F-22 Raptor" auto-rotate camera-controls
+                                style="width: 100%; height: 400px;">
+                            </model-viewer>
+                            <span class="vehicle-badge dominio-aereo pulse-badge">
+                                <span class="badge-icon">✈️</span> Superioridad
+                            </span>
+                            <div class="rarity-indicator mythic">
+                                <span class="rarity-shine"></span>
+                            </div>
                         </div>
                         
-                        <div class="vehicle-content-section">
-                            <div class="vehicle-info">
-                                <h3 class="vehicle-name">F-22 Raptor</h3>
-                                <p class="vehicle-type">Caza de Superioridad Aérea</p>
-                                <p class="vehicle-description">Caza stealth de quinta generación con capacidades de superioridad aérea incomparables. Invisible al radar enemigo y armado con los sistemas más avanzados.</p>
+                        <div class="vehicle-content-section-enhanced">
+                            <div class="vehicle-header">
+                                <div>
+                                    <h3 class="vehicle-name">F-22 Raptor</h3>
+                                    <p class="vehicle-type">Caza de Superioridad Aérea</p>
+                                </div>
+                                <div class="vehicle-level">Nv. 35</div>
                             </div>
                             
-                            <div class="vehicle-stats">
+                            <p class="vehicle-description">Caza stealth de quinta generación con capacidades de superioridad aérea incomparables. Invisible al radar enemigo y armado con los sistemas más avanzados.</p>
+                            
+                            <div class="vehicle-stats-enhanced">
                                 <div class="stat-row">
-                                    <span class="stat-label">🛡️ Blindaje:</span>
+                                    <span class="stat-label">🛡️ Sigilo</span>
                                     <div class="stat-container">
                                         <div class="progress-bar">
-                                            <div class="progress-fill power-85"></div>
+                                            <div class="progress-fill power-98 animated-bar"></div>
                                         </div>
-                                        <span class="stat-value">85</span>
+                                        <span class="stat-value">98</span>
                                     </div>
                                 </div>
                                 
                                 <div class="stat-row">
-                                    <span class="stat-label">⚡ Velocidad:</span>
-                                    <span class="stat-value">2410 km/h</span>
+                                    <span class="stat-label">⚡ Velocidad</span>
+                                    <span class="stat-value highlight">2410 km/h</span>
                                 </div>
                                 
                                 <div class="stat-row">
-                                    <span class="stat-label">🔥 Potencia:</span>
+                                    <span class="stat-label">🔥 Potencia</span>
                                     <div class="stat-container">
                                         <div class="progress-bar">
-                                            <div class="progress-fill power-95"></div>
+                                            <div class="progress-fill power-95 animated-bar"></div>
                                         </div>
                                         <span class="stat-value">95</span>
                                     </div>
                                 </div>
                             </div>
                             
-                            <div class="vehicle-details">
+                            <div class="vehicle-details-enhanced">
                                 <div class="detail-item">
-                                    <span class="detail-label">👥 Tripulación:</span>
+                                    <span class="detail-label">👥 Tripulación</span>
                                     <span class="detail-value">1 persona</span>
                                 </div>
                                 <div class="detail-item">
-                                    <span class="detail-label">⚖️ Peso:</span>
+                                    <span class="detail-label">⚖️ Peso</span>
                                     <span class="detail-value">19.7 toneladas</span>
                                 </div>
+                            </div>
+
+                            <div class="vehicle-footer">
+                                <button class="vehicle-btn" data-testid="deploy-f22-btn">
+                                    <span class="btn-glow"></span>
+                                    <span class="btn-icon">🚀</span> DESPLEGAR
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -396,28 +373,112 @@
         </div>
     </main>
 
-    
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Guerra Táctica. Todos los derechos reservados.</p>
+            <p class="footer-version">BUILD 2.5.847 | ALPHA</p>
         </div>
     </footer>
 
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
     <script>
+        function createParticles() {
+            const container = document.getElementById('particles');
+            const particleCount = 50;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                const size = Math.random() * 3 + 1;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 5 + 's';
+                particle.style.animationDuration = (Math.random() * 15 + 10) + 's';
+                particle.style.opacity = Math.random() * 0.5 + 0.2;
+                container.appendChild(particle);
+            }
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
-            const vehicleCards = document.querySelectorAll('.vehicle-card');
+            createParticles();
+            
+            const vehicleCards = document.querySelectorAll('.vehicle-card-enhanced');
+
+            vehicleCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 150);
+            });
 
             vehicleCards.forEach(card => {
                 card.addEventListener('click', function() {
                     vehicleCards.forEach(c => c.classList.remove('selected'));
                     this.classList.add('selected');
+                });
+            });
 
-                    this.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'center'
+            const filterTabs = document.querySelectorAll('.filter-tab');
+            filterTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    filterTabs.forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    const filter = this.getAttribute('data-filter');
+                    vehicleCards.forEach(card => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 10);
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(30px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
                     });
                 });
+            });
+
+            const deployBtns = document.querySelectorAll('.vehicle-btn');
+            deployBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    this.classList.add('deployed');
+                    this.innerHTML = '<span class="btn-glow"></span><span class="btn-icon">✓</span> DESPLEGADO';
+                    
+                    const card = this.closest('.vehicle-card-enhanced');
+                    card.style.boxShadow = '0 0 40px rgba(34, 197, 94, 0.6)';
+                    
+                    setTimeout(() => {
+                        this.classList.remove('deployed');
+                        this.innerHTML = '<span class="btn-glow"></span><span class="btn-icon">🚀</span> DESPLEGAR';
+                        card.style.boxShadow = '';
+                    }, 2000);
+                });
+            });
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const bars = entry.target.querySelectorAll('.animated-bar');
+                        bars.forEach(bar => {
+                            bar.style.animation = 'fillBar 1s ease-out forwards';
+                        });
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            vehicleCards.forEach(card => {
+                observer.observe(card);
             });
         });
     </script>

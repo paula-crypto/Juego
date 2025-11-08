@@ -8,18 +8,30 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Particles Background -->
+    <div class="particles-container" id="particles"></div>
+    
+    <!-- Animated Grid Background -->
+    <div class="grid-background"></div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-brand">
-                <span class="nav-icon">🛡️</span>
-                <span class="brand-text">Guerra Táctica</span>
+                <span class="nav-icon pulse-icon">🛡️</span>
+                <span class="brand-text glitch-text" data-text="Guerra Táctica">Guerra Táctica</span>
             </div>
             
             <div class="nav-menu">
-                <a href="index.html" class="nav-link active">🏠 Inicio</a>
-                <a href="armamento.html" class="nav-link">⚔️ Armamento</a>
-                <a href="vehiculos.html" class="nav-link">🚗 Vehículos</a>
+                <a href="index.html" class="nav-link active">
+                    <span class="nav-icon-small">🏠</span> Inicio
+                </a>
+                <a href="armamento.html" class="nav-link">
+                    <span class="nav-icon-small">⚔️</span> Armamento
+                </a>
+                <a href="vehiculos.html" class="nav-link">
+                    <span class="nav-icon-small">🚗</span> Vehículos
+                </a>
             </div>
         </div>
     </nav>
@@ -32,49 +44,102 @@
 
         <div class="hero-scanlines"></div>
         <div class="hero-overlay"></div>
+        <div class="hero-grid-overlay"></div>
+        
+        
+        <div class="hud-corners">
+            <div class="corner corner-tl"></div>
+            <div class="corner corner-tr"></div>
+            <div class="corner corner-bl"></div>
+            <div class="corner corner-br"></div>
+        </div>
 
         <div class="hero-content">
-            <div class="hero-logo-container">
+           
+            <div class="boot-sequence" id="bootSequence">
+                <div class="boot-line">[ INICIANDO SISTEMA TÁCTICO... ]</div>
+                <div class="boot-line">[ CARGANDO PROTOCOLOS DE COMBATE... ]</div>
+                <div class="boot-line">[ SINCRONIZANDO ARMAMENTO... ]</div>
+                <div class="boot-line">[ CONECTANDO CON SERVIDORES... ]</div>
+                <div class="boot-line success">[ SISTEMA OPERATIVO - LISTO ]</div>
+            </div>
+
+            <div class="hero-logo-container" id="heroContent">
                 <div class="hero-logo-glow"></div>
-                <h1 class="hero-title glitch" data-text="GUERRA TÁCTICA">GUERRA TÁCTICA</h1>
-                <div class="hero-subtitle">SISTEMA DE COMBATE TÁCTICO v2.5</div>
+                <div class="terminal-line">[ SISTEMA INICIALIZADO ]</div>
+                <h1 class="hero-title glitch-extreme" data-text="GUERRA TÁCTICA">GUERRA TÁCTICA</h1>
+                <div class="hero-subtitle typing-effect">SISTEMA DE COMBATE TÁCTICO v2.5</div>
+                <div class="status-bar">
+                    <span class="status-indicator active"></span>
+                    <span class="status-text">TODOS LOS SISTEMAS OPERATIVOS</span>
+                </div>
             </div>
 
-            <div class="main-menu">
-                <a href="armamento.html" class="menu-option" data-index="1">
+            <div class="main-menu" id="mainMenu">
+                <a href="armamento.html" class="menu-option animate-in" data-index="1">
+                    <div class="menu-hover-effect"></div>
+                    <div class="menu-glow"></div>
                     <span class="menu-bracket">&gt;</span>
-                    <span class="menu-text">ARSENAL DE COMBATE</span>
-                    <span class="menu-description">Explora armamento táctico</span>
+                    <div class="menu-content">
+                        <span class="menu-number">01</span>
+                        <span class="menu-text">ARSENAL DE COMBATE</span>
+                        <span class="menu-description">Explora armamento táctico de última generación</span>
+                    </div>
+                    <span class="menu-arrow">→</span>
                 </a>
-                <a href="vehiculos.html" class="menu-option" data-index="2">
+                <a href="vehiculos.html" class="menu-option animate-in" data-index="2">
+                    <div class="menu-hover-effect"></div>
+                    <div class="menu-glow"></div>
                     <span class="menu-bracket">&gt;</span>
-                    <span class="menu-text">FLOTA MILITAR</span>
-                    <span class="menu-description">Vehículos de combate</span>
+                    <div class="menu-content">
+                        <span class="menu-number">02</span>
+                        <span class="menu-text">FLOTA MILITAR</span>
+                        <span class="menu-description">Vehículos de combate terrestres y aéreos</span>
+                    </div>
+                    <span class="menu-arrow">→</span>
                 </a>
-                <a href="#" class="menu-option" data-index="3">
+                <a href="#" class="menu-option animate-in" data-index="3">
+                    <div class="menu-hover-effect"></div>
+                    <div class="menu-glow"></div>
                     <span class="menu-bracket">&gt;</span>
-                    <span class="menu-text">MULTIJUGADOR</span>
-                    <span class="menu-description">Combate en línea</span>
+                    <div class="menu-content">
+                        <span class="menu-number">03</span>
+                        <span class="menu-text">MULTIJUGADOR</span>
+                        <span class="menu-description">Combate táctico en línea</span>
+                    </div>
+                    <span class="menu-arrow">→</span>
                 </a>
-                <a href="#" class="menu-option" data-index="4">
+                <a href="#" class="menu-option animate-in" data-index="4">
+                    <div class="menu-hover-effect"></div>
+                    <div class="menu-glow"></div>
                     <span class="menu-bracket">&gt;</span>
-                    <span class="menu-text">CONFIGURACIÓN</span>
-                    <span class="menu-description">Ajustes del sistema</span>
+                    <div class="menu-content">
+                        <span class="menu-number">04</span>
+                        <span class="menu-text">CONFIGURACIÓN</span>
+                        <span class="menu-description">Ajustes y personalización del sistema</span>
+                    </div>
+                    <span class="menu-arrow">→</span>
                 </a>
             </div>
 
-            <div class="hero-stats">
+            <div class="hero-stats" id="heroStats">
                 <div class="stat-item">
+                    <div class="stat-glow"></div>
+                    <span class="stat-icon">👥</span>
                     <span class="stat-label">JUGADORES EN LÍNEA</span>
-                    <span class="stat-number" data-target="2847">0</span>
+                    <span class="stat-number glow-green" data-target="2847">0</span>
                 </div>
                 <div class="stat-item">
+                    <div class="stat-glow"></div>
+                    <span class="stat-icon">🎯</span>
                     <span class="stat-label">MISIONES ACTIVAS</span>
-                    <span class="stat-number" data-target="156">0</span>
+                    <span class="stat-number glow-yellow" data-target="156">0</span>
                 </div>
                 <div class="stat-item">
+                    <div class="stat-glow"></div>
+                    <span class="stat-icon">🖥️</span>
                     <span class="stat-label">SERVIDORES</span>
-                    <span class="stat-number" data-target="42">0</span>
+                    <span class="stat-number glow-blue" data-target="42">0</span>
                 </div>
             </div>
         </div>
@@ -83,43 +148,59 @@
     <section class="features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">CARACTERÍSTICAS DEL JUEGO</h2>
+                <h2 class="section-title glitch-text" data-text="CARACTERÍSTICAS DEL JUEGO">CARACTERÍSTICAS DEL JUEGO</h2>
                 <p class="section-description">
                     Experimenta el combate táctico más realista con tecnología militar de vanguardia
                 </p>
             </div>
 
             <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-glow"></div>
+                    <div class="feature-icon-container">
+                        <div class="feature-icon pulse-icon">🎯</div>
+                    </div>
                     <h3 class="feature-title">Estrategia Táctica</h3>
                     <p class="feature-description">
-                        Planifica movimientos precisos y ejecuta estrategias militares avanzadas
+                        Planifica movimientos precisos y ejecuta estrategias militares avanzadas en tiempo real
                     </p>
+                    <div class="feature-stat">+500 Escenarios</div>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🛡️</div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-glow"></div>
+                    <div class="feature-icon-container">
+                        <div class="feature-icon pulse-icon">🛡️</div>
+                    </div>
                     <h3 class="feature-title">Armamento Avanzado</h3>
                     <p class="feature-description">
-                        Amplio arsenal de armas modernas con estadísticas realistas
+                        Amplio arsenal de armas modernas con estadísticas realistas y personalización completa
                     </p>
+                    <div class="feature-stat">+100 Armas</div>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">👥</div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-glow"></div>
+                    <div class="feature-icon-container">
+                        <div class="feature-icon pulse-icon">👥</div>
+                    </div>
                     <h3 class="feature-title">Combate Multijugador</h3>
                     <p class="feature-description">
-                        Enfréntate a otros comandantes en batallas épicas
+                        Enfréntate a otros comandantes en batallas épicas de hasta 64 jugadores simultáneos
                     </p>
+                    <div class="feature-stat">64 Jugadores</div>
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🏆</div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-glow"></div>
+                    <div class="feature-icon-container">
+                        <div class="feature-icon pulse-icon">🏆</div>
+                    </div>
                     <h3 class="feature-title">Progresión Militar</h3>
                     <p class="feature-description">
-                        Asciende de rango y desbloquea nuevo equipamiento
+                        Asciende de rango y desbloquea nuevo equipamiento, habilidades y recompensas exclusivas
                     </p>
+                    <div class="feature-stat">50 Rangos</div>
                 </div>
             </div>
         </div>
@@ -129,20 +210,86 @@
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Guerra Táctica. Todos los derechos reservados.</p>
+            <p class="footer-version">BUILD 2.5.847 | ALPHA</p>
         </div>
     </footer>
 
     <script>
+        // Enhanced Particles system
+        function createParticles() {
+            const container = document.getElementById('particles');
+            const particleCount = 80;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                
+                // Random properties
+                const size = Math.random() * 3 + 1;
+                particle.style.width = size + 'px';
+                particle.style.height = size + 'px';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.top = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 5 + 's';
+                particle.style.animationDuration = (Math.random() * 15 + 10) + 's';
+                
+                // Random opacity
+                particle.style.opacity = Math.random() * 0.5 + 0.2;
+                
+                container.appendChild(particle);
+            }
+        }
+
+
+        function startBootSequence() {
+            const bootSequence = document.getElementById('bootSequence');
+            const heroContent = document.getElementById('heroContent');
+            const mainMenu = document.getElementById('mainMenu');
+            const heroStats = document.getElementById('heroStats');
+            const bootLines = bootSequence.querySelectorAll('.boot-line');
+            
+
+            heroContent.style.opacity = '0';
+            mainMenu.style.opacity = '0';
+            heroStats.style.opacity = '0';
+            
+        
+            bootLines.forEach((line, index) => {
+                setTimeout(() => {
+                    line.style.opacity = '1';
+                    line.style.transform = 'translateX(0)';
+                }, index * 300);
+            });
+            
+        
+            setTimeout(() => {
+                bootSequence.style.opacity = '0';
+                setTimeout(() => {
+                    bootSequence.style.display = 'none';
+                    heroContent.style.opacity = '1';
+                    mainMenu.style.opacity = '1';
+                    heroStats.style.opacity = '1';
+                }, 500);
+            }, bootLines.length * 300 + 800);
+        }
+
         document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            startBootSequence();
+            
             const menuOptions = document.querySelectorAll('.menu-option');
-            menuOptions.forEach(option => {
+            menuOptions.forEach((option, index) => {
+                option.style.animationDelay = (index * 0.1) + 's';
+                
                 option.addEventListener('mouseenter', function() {
-                    this.style.transform = 'translateX(15px)';
+                    this.style.transform = 'translateX(10px) scale(1.02)';
                 });
+                
                 option.addEventListener('mouseleave', function() {
-                    this.style.transform = 'translateX(0)';
+                    this.style.transform = 'translateX(0) scale(1)';
                 });
             });
+
 
             const statNumbers = document.querySelectorAll('.stat-number');
             statNumbers.forEach(stat => {
@@ -152,14 +299,46 @@
                 const timer = setInterval(() => {
                     current += increment;
                     if (current >= target) {
-                        stat.textContent = target;
+                        stat.textContent = target.toLocaleString();
                         clearInterval(timer);
+                     
+                        stat.style.textShadow = '0 0 20px currentColor';
+                        setTimeout(() => {
+                            stat.style.textShadow = '0 0 10px currentColor';
+                        }, 200);
                     } else {
-                        stat.textContent = Math.floor(current);
+                        stat.textContent = Math.floor(current).toLocaleString();
                     }
                 }, 20);
             });
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.feature-card').forEach(card => {
+                observer.observe(card);
+            });
+            
+            const statItems = document.querySelectorAll('.stat-item');
+            statItems.forEach((item, index) => {
+                item.style.animationDelay = (index * 0.2) + 's';
+            });
         });
+
+        setInterval(() => {
+            const title = document.querySelector('.hero-title');
+            if (title && Math.random() > 0.95) {
+                title.classList.add('glitching');
+                setTimeout(() => {
+                    title.classList.remove('glitching');
+                }, 200);
+            }
+        }, 2000);
     </script>
 </body>
 </html>
