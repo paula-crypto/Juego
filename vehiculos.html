@@ -402,7 +402,24 @@
             <p>&copy; 2025 Guerra Táctica. Todos los derechos reservados.</p>
         </div>
     </footer>
-</body>
-</html>
 
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const vehicleCards = document.querySelectorAll('.vehicle-card');
+
+            vehicleCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    vehicleCards.forEach(c => c.classList.remove('selected'));
+                    this.classList.add('selected');
+
+                    this.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

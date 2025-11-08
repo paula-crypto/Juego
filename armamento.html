@@ -693,5 +693,24 @@
             <p>&copy; 2025 Guerra Táctica. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const weaponCards = document.querySelectorAll('.weapon-card');
+
+            weaponCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    weaponCards.forEach(c => c.classList.remove('selected'));
+                    this.classList.add('selected');
+
+                    this.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                });
+            });
+        });
+    </script>
 </body>
-</html><script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+</html>

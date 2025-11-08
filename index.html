@@ -26,26 +26,64 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <!-- Video de fondo: archivo local en la misma carpeta. Cambia el nombre del src si deseas usar otro video. -->
         <video class="hero-video" autoplay muted loop playsinline aria-hidden="true">
             <source src="Ttulo_Estrategias_de_Guerra_Tctica_Dominando_el_Ca (1) (online-video-cutter.com).mp4" type="video/mp4">
-            <!-- Fallback: el navegador no soporta video -->
         </video>
+
+        <div class="hero-scanlines"></div>
+        <div class="hero-overlay"></div>
+
         <div class="hero-content">
-            <h1 class="hero-title">GUERRA TÁCTICA</h1>
-            
-            <div class="hero-buttons">
-                <a href="armamento.html" class="btn btn-primary" role="button">Iniciar Misión</a>
-                <a href="armamento.html" class="btn btn-secondary" role="button">Ver Arsenal</a>
+            <div class="hero-logo-container">
+                <div class="hero-logo-glow"></div>
+                <h1 class="hero-title glitch" data-text="GUERRA TÁCTICA">GUERRA TÁCTICA</h1>
+                <div class="hero-subtitle">SISTEMA DE COMBATE TÁCTICO v2.5</div>
+            </div>
+
+            <div class="main-menu">
+                <a href="armamento.html" class="menu-option" data-index="1">
+                    <span class="menu-bracket">&gt;</span>
+                    <span class="menu-text">ARSENAL DE COMBATE</span>
+                    <span class="menu-description">Explora armamento táctico</span>
+                </a>
+                <a href="vehiculos.html" class="menu-option" data-index="2">
+                    <span class="menu-bracket">&gt;</span>
+                    <span class="menu-text">FLOTA MILITAR</span>
+                    <span class="menu-description">Vehículos de combate</span>
+                </a>
+                <a href="#" class="menu-option" data-index="3">
+                    <span class="menu-bracket">&gt;</span>
+                    <span class="menu-text">MULTIJUGADOR</span>
+                    <span class="menu-description">Combate en línea</span>
+                </a>
+                <a href="#" class="menu-option" data-index="4">
+                    <span class="menu-bracket">&gt;</span>
+                    <span class="menu-text">CONFIGURACIÓN</span>
+                    <span class="menu-description">Ajustes del sistema</span>
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-label">JUGADORES EN LÍNEA</span>
+                    <span class="stat-number" data-target="2847">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">MISIONES ACTIVAS</span>
+                    <span class="stat-number" data-target="156">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label">SERVIDORES</span>
+                    <span class="stat-number" data-target="42">0</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
     <section class="features">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Características del Juego</h2>
+                <h2 class="section-title">CARACTERÍSTICAS DEL JUEGO</h2>
                 <p class="section-description">
                     Experimenta el combate táctico más realista con tecnología militar de vanguardia
                 </p>
@@ -87,22 +125,41 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="container">
-            <h2 class="cta-title">¿Listo para el Combate?</h2>
-            <p class="cta-description">
-                Únete a miles de comandantes en el campo de batalla más intenso
-            </p>
-            <button class="btn btn-primary btn-large">Comenzar Ahora</button>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Guerra Táctica. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuOptions = document.querySelectorAll('.menu-option');
+            menuOptions.forEach(option => {
+                option.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateX(15px)';
+                });
+                option.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateX(0)';
+                });
+            });
+
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => {
+                const target = parseInt(stat.getAttribute('data-target'));
+                let current = 0;
+                const increment = target / 100;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        stat.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        stat.textContent = Math.floor(current);
+                    }
+                }, 20);
+            });
+        });
+    </script>
 </body>
 </html>
